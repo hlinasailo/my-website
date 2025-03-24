@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "React Navbar example from https://coreui.io/react/docs/components/navbar/",
   "main": "src/index.js",
+  "homepage": "https://threadlib.github.io/img-web2b0/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@coreui/coreui": "latest",
@@ -15,7 +17,8 @@
     "axios": "^1.8.3",
     "react": "~18.3",
     "react-dom": "~18.3",
-    "react-router-dom": "^7.4.0"
+    "react-router-dom": "^7.4.0",
+    "gh-pages": "^6.1.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
