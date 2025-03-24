@@ -1,0 +1,116 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%; /* Ensure it takes up the full width */
+}
+
+.container-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px; /* Adjust as needed */
+  margin-left: 10px;
+}
+
+.container-group > * {
+  margin: 10px 0;
+}
+
+.rectangle {
+  width: 90%;
+  max-width: 300px;
+  height: 600px; /* Twice the height of the Container */
+  border: 0.1px solid rgb(231, 226, 226); /* Make the border solid */
+  background-color: white;
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center;
+  justify-content: center;
+  margin: 40px 1px;
+  margin-top: 120px;
+}
+
+.rectangle-button {
+  padding: 10px 70px;
+  font-size: 16px;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px 0; /* Add some margin between buttons */
+}
+
+.rectangle-button:hover {
+  background-color: #eba4e6;
+}
+
+.container-group h2 {
+  margin: 30px 0;
+}
+
+button {
+  padding: 10px 200px;
+  font-size: 20px;
+  color: black;
+  background-color: #f787e4;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid rgb(223, 219, 219);
+}
+
+button:hover {
+  background-color: rgb(218, 213, 213);
+}
+
+h3 {
+  text-align: center; /* Center the h3 element */
+  padding-top: 20px;
+  display: block;
+}
+
+h3 span, h2 span {
+  background: linear-gradient(270deg, #ff6ec4, #7873f5);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 3s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h3 {
+  margin: 30px 10px; /* Center the h2 element */
+}

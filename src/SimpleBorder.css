@@ -1,0 +1,94 @@
+/* SimpleBorder.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: white; /* Tailwind's gray-200 */
+
+}
+
+.border-box {
+    border: 0.0px solid black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 80%;
+    width: 600px;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    
+}
+.border-box:hover {
+    background-color: rgb(238, 237, 237);
+}
+.image:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+.image {
+    width: 10px; /* Set width to 45px */
+    height: 10px; /* Set height to 45px */
+    border-radius: 15px;
+    margin-right: 15px;
+  }
+
+.text {
+    flex: 1;
+}
+.Footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(270deg, #a33376, #5e5ada);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    padding: 10px;
+    text-align: center;
+    min-height: 9rem;
+    
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.view {
+    padding: 4px 6px;
+}
+.container img, .container1 img, .container2 img, .container3 img ,.container4 img ,.container5 img ,.container6 img {
+    width: 40px; /* Set width to 45px */
+    height: 40px; /* Set height to 45px */
+    border-radius: 15px;
+    margin-right: 15px;
+}
+.container7 img, .container8 img, .container9 img, .container10 img ,.container11 img ,.container12 img ,.container13 img {
+    width: 40px; /* Set width to 45px */
+    height: 40px; /* Set height to 45px */
+    border-radius: 15px;
+    margin-right: 15px;
+}
+/* Add hover effect for the span element */
+.border-box .text span {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .border-box:hover .text span {
+    color: #db0db9; /* Change color on hover */
+    font-weight: bold;
+  }
