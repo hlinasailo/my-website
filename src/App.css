@@ -114,3 +114,20 @@ h3 span, h2 span {
 h3 {
   margin: 30px 10px; /* Center the h2 element */
 }
+
+.vm-link {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Ensure all links work properly */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Debug styles (remove after testing) */
+.flex-container {
+  border: 1px solid transparent;
+}

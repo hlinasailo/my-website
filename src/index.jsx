@@ -5,8 +5,8 @@ import "@coreui/coreui/dist/css/coreui.min.css";
 import { NavbarExample } from "./NavbarExample.jsx";
 import Footer from "./footer.jsx";
 import Today from "./today.jsx";
-import Yesterday from "./yesterday.jsx"; // Fixed duplicate import
-import Week from "./week.jsx"; // Fixed duplicate import
+import Yesterday from "./yesterday.jsx";
+import Week from "./week.jsx";
 import Container from "./Container.jsx";
 import Rectangle from "./rectangle.jsx";
 import "./App.css";
@@ -29,83 +29,86 @@ import Container20 from "./Container20.jsx";
 import Container21 from "./Container21.jsx";
 import Container22 from "./Container22.jsx";
 
+// Home Page Component
+const Home = () => (
+  <div className="p-0">
+    <div className="flex-container">
+      <div className="container-group">
+        <h2>Top <span>Products Launching</span> Today</h2>
+        <Container />
+        <Container1 />
+        <Container2 />
+        <Container3 />
+        <Container4 />
+        <Container5 />
+        <Container6 />
+        <Container7 />
+        <Link to="/today" className="vm-link">
+          <button className="vm">View more</button>
+        </Link>
+      </div>
+      <Rectangle />
+    </div>
+
+    <div className="flex-container">
+      <div className="container-group">
+        <h3>Yesterday's Top <span>Products</span></h3>
+        <Container10 />
+        <Container11 />
+        <Container12 />
+        <Container13 />
+        <Container14 />
+        <Container15 />
+        <Link to="/yesterday" className="vm-link">
+          <button className="vm">View more</button>
+        </Link>
+      </div>
+    </div>
+
+    <div className="flex-container">
+      <div className="container-group">
+        <h3>Last Week's Top <span>Products</span></h3>
+        <Container18 />
+        <Container19 />
+        <Container20 />
+        <Container21 />
+        <Container22 />
+        <Link to="/week" className="vm-link">
+          <button className="vm">View more</button>
+        </Link>
+      </div>
+    </div>
+
+    <Footer />
+  </div>
+);
+
+// Fallback Component for Undefined Routes
+const NotFound = () => (
+  <div style={{ padding: "20px" }}>
+    <h2>Page Not Found</h2>
+    <p>The requested URL was not found on this server.</p>
+    <Link to="/">Return to Home</Link>
+  </div>
+);
+
+// Main App Component
 const App = () => {
   return (
-    <Router>
+    <Router basename="/my-website">
       <NavbarExample />
       <Routes>
-        {/* Home Page */}
-        <Route
-          path="/"
-          element={
-            <div className="p-0">
-              <div className="flex-container">
-                <div className="container-group">
-                  <h2>Top <span>Products Launching</span> Today</h2>
-                  <Container />
-                  <Container1 />
-                  <Container2 />
-                  <Container3 />
-                  <Container4 />
-                  <Container5 />
-                  <Container6 />
-                  <Container7 />
-
-                  {/* Use React Router Link */}
-                  <Link to="/today">
-                    <button className="vm">View more</button>
-                  </Link>
-                </div>
-                <Rectangle />
-              </div>
-
-              <div className="flex-container">
-                <div className="container-group">
-                  <h3>Yesterday's Top <span>Products</span></h3>
-                  <Container10 />
-                  <Container11 />
-                  <Container12 />
-                  <Container13 />
-                  <Container14 />
-                  <Container15 />
-                  <Link to="/yesterday">
-                    <button className="vm">View more</button>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="flex-container">
-                <div className="container-group">
-                  <h3>Last Week's Top <span>Products</span></h3>
-                  <Container18 />
-                  <Container19 />
-                  <Container20 />
-                  <Container21 />
-                  <Container22 />
-                  <Link to="/week">
-                    <button className="vm">View more</button>
-                  </Link>
-                </div>
-              </div>
-
-              <Footer />
-            </div>
-          }
-        />
-        
-        {/* Today Page */}
+        <Route path="/" element={<Home />} />
         <Route path="/today" element={<Today />} />
-
-        {/* Yesterday Page */}
         <Route path="/yesterday" element={<Yesterday />} />
-
-        {/* Week Page */}
         <Route path="/week" element={<Week />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
 };
 
+// Render the App
 ReactDOM.createRoot(document.querySelector("#root")).render(
   <React.StrictMode>
     <App />

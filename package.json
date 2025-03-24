@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "React Navbar example from https://coreui.io/react/docs/components/navbar/",
   "main": "src/index.js",
+  "homepage": "https://hlinasailo.github.io/my-website",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@coreui/coreui": "latest",
@@ -18,7 +21,7 @@
     "react-router-dom": "^7.4.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-react": "^4.3.4",
     "vite": "^6.2.2"
   }
 }
