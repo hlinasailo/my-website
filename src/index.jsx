@@ -1,6 +1,6 @@
 import React from "react";
 import * as ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "@coreui/coreui/dist/css/coreui.min.css";
 import { NavbarExample } from "./NavbarExample.jsx";
 import Footer from "./footer.jsx";
