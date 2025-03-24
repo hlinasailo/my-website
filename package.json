@@ -2,7 +2,7 @@
   "name": "react-navbar-example",
   "version": "1.0.0",
   "description": "React Navbar example from https://coreui.io/react/docs/components/navbar/",
-  "main": "src/index.html",
+  "main": "src/index.jsx",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
